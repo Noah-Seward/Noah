@@ -1,0 +1,256 @@
+h1 {
+    font-size: 40px;
+    text-align: center;
+    font-family: Impact;
+    color: black;
+}
+html {
+    margin: 0px;
+    margin: 0px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0px;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 65px auto 150px;
+    grid-template-rows: 45px 800px 120px;
+    grid-template-areas: 
+    "head aside aside"
+    "main main main"
+    "footer footer footer";
+}
+footer {
+    background: rgb(200, 212, 224);
+    grid-area: footer;
+    padding: 25px 0px;
+}
+.menu {
+    grid-area: aside;
+    background: black;
+    color: lightskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.header {
+    background: mediumblue;
+    grid-area: head;
+    margin: 0px;
+    padding: 0px;
+}
+.main {
+    grid-area: main;
+}
+.headFlex {
+    color: ghostwhite;
+    width: 50px;
+    font: Impact;
+    font-size: 25px;
+    font: bold;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+.headFlex p {
+    font: Impact bold;
+
+}
+.headFlex div {
+    width: 75px;
+}
+.menu p:hover {
+    color:ghostwhite;
+    cursor: pointer;
+
+}
+.headFlex:hover {
+    color: lightskyblue;
+    cursor: pointer;
+}
+.main p {
+    text-align: center;
+    margin: 25px;
+    font-size: 20px;
+    padding: 10px;
+}
+.RLLogo {
+    height: 250px;
+    float: left;
+    border-radius: 10px;
+}
+.RLCars {
+    height: 250px;
+    float: right;
+    border-radius: 10px;
+}
+.RLRanks {
+    height: 350px;
+    float: right;
+    border-radius: 10px;
+}
+.RLRanks2 {
+    height: 350px;
+    float: left;
+    border-radius: 10px;
+}
+#Gold {
+    display: none;
+}
+#Plat {
+    display: none;
+}
+#Diamond {
+    display: none;
+}
+#Champ {
+    display: none;
+}
+#GrandChamp {
+    display: none;
+}
+#SSL {
+    display: none;
+}
+#Home {
+    display: block;
+}
+.bg-left {
+    background: lightgrey;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 82%;
+    z-index: -1;
+}
+.bg-right {
+    background: lightgrey;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 82%;
+    right: 0;
+    z-index: -1;
+}
+.rankInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    font-size: 20px;
+    flex-wrap: wrap;
+}
+.bg-info {
+    background: rgb(224, 223, 223);
+    position: absolute;
+    top: 0;
+    bottom: 78%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.rankLogo {
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    height: 85px;
+    float: right;
+    border-radius: 10px;
+}
+#learn {
+    border-left: solid black;
+    border-right: solid black;
+}
+.rankInfo h2 {
+    text-align: center;
+    color: blue;
+}
+.rankInfo div {
+    padding: 15px;
+}
+.powerShot {
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.powerShot2 {
+    height: 250px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.backpost {
+    height: 300px;
+    float: right;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.shadow {
+    height: 400px;
+    float: right;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.flipReset {
+    height: 250px;
+    float: right;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.motivation {
+    background: darkblue;
+    font-family: monospace;
+    text-align: center;
+    line-height: 250px;
+    margin: 20px 0px 25px 300px;
+    border-radius: 25px;
+}
+.motivation h2 {
+    margin: 20px;
+    color: ghostwhite;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+.motopic {
+    display: flex;
+    justify-content: space-evenly;
+}
+.motivation2 {
+    background:slategrey;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 250px;
+    margin: 20px 300px 25px 0px;
+    border-radius: 50px;
+}
+.motivation2 h2 {
+    margin: 20px;
+    color: ghostwhite;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+.motivation3 {
+    background: mediumpurple;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    line-height: 350px;
+    margin: 20px 175px 25px 0px;
+    border-radius: 50px;
+}
+.motivation3 h2 {
+    margin: 20px;
+    font-size: 30px;
+    color: ghostwhite;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+@media only screen and (max-width: 768px) {
+    body {
+        background: black;
+    }
+}

@@ -22,15 +22,16 @@ different formats to my website.
 
 <!--- Title for my website.-->
     <head>
-        <link rel="stylesheet" href= "style.css">
-        <script src="java.js"></script>
+        <link rel="stylesheet" href= "main.css">
+        <link rel="stylesheet" href="" id="theme">
+        <script src="main.js"></script>
         <title>This is Rocket League</title>
     </head>
     
     <body>
         <section class="header">
             <div class="headFlex">
-                <section class="logo" onclick="home()">
+                <section class="logo" onclick="Fun(event, 'Home')">
                     RLM
                 </section>
                 <div></div>
@@ -72,7 +73,6 @@ different formats to my website.
                 <h1 style="color: goldenrod;">
                     GOLD
                 </h1>
-                
                 <div class="rankInfo">
                     <div id="know">
                         <h2>--Things you should know--</h2>
@@ -88,7 +88,7 @@ different formats to my website.
                         <ul>
                             <li>Accuracy and open nets</li>
                             <li>Power shots</li>
-                            <li>Basic Arials (<i>Just hitting the ball in the air</i>)</li>
+                            <li>Basic Aerials (<i>Just hitting the ball in the air</i>)</li>
                             <li>Saves</li>
                             <li>Basic Rotations (<i>Off ball rotations, <br>back post rotations</i>)</li>
                         </ul>
@@ -193,7 +193,7 @@ different formats to my website.
                         <h2>--Things to think about--</h2>
                         <ul>
                             <li>Making sure you aren't bumping team mate</li>
-                            <li>Not double committing</li>
+                            <li><b>Not double committing</b></li>
                             <li>Knowing your own limits</li>
                             <li>Knowing opponents limits</li>
                         </ul>
@@ -218,10 +218,9 @@ different formats to my website.
                     <div id="know">
                         <h2>--Things you should know--</h2>
                         <ul>
-                            <li>Increase shot percentage</li>
                             <li>Switch to ball camera or car camera when rotating</li>
-                            <li>Back post rotation</li>
-                            <li>Able to catch ball while watching circle on the ground</li>
+                            <li>Find that back post and let it do the work for you</li>
+                            <li>Able to save most if not all shots on net</li>
                         </ul>
                     </div>
                     <div id="learn">
@@ -237,7 +236,7 @@ different formats to my website.
                         <h2>--Things to think about--</h2>
                         <ul>
                             <li>Practice making double touches off backboard</li>
-                            <li><b>Never double committing</b></li>
+                            <li>If you are still double committing, <br>please get your head out of the gutter</li>
                             <li>Collecting small boost pads in rotation</li>
                             <li>Find a team mate to rank up with</li>
                             <li>Get a coach or trainer</li>
@@ -348,36 +347,40 @@ different formats to my website.
                 </div>
             </section>
         </section>
-    </body>
-    <section class="menu">
-        <p onclick="goldFun()">
-            GOLD
-        </p>
-        <p onclick="platFun()">
-            PLAT
-        </p>
-        <p onclick="diamondFun()">
-            DIAMOND
-        </p>
-        <p onclick="champFun()">
-            CHAMP
-        </p>
-        <p onclick="grandChampFun()">
-            GRAND CHAMP
-        </p>
-        <p onclick="SSLFun()">
-            SSL
-        </p>
+    
+        <section class="menu">
+            <p onclick="Fun(event, 'Gold')" class="menuText">
+                GOLD
+            </p>
+            <p onclick="Fun(event, 'Plat')" class="menuText">
+                PLAT
+            </p>
+            <p onclick="Fun(event, 'Diamond')" class="menuText">
+                DIAMOND
+            </p>
+            <p onclick="Fun(event, 'Champ')" class="menuText">
+                CHAMP
+            </p>
+            <p onclick="Fun(event, 'GrandChamp')" class="menuText">
+                GRAND CHAMP
+            </p>
+            <p onclick="Fun(event, 'SSL')" class="menuText">
+                SSL
+            </p>
+            <p onclick="theme()" class="menuText">
+                THEME
+            </p>
 
-    </section>
-    <footer>
-        <p>
-            <i>Check your own stats here:</i> <a href="https://rocketleague.tracker.network/">https://rocketleague.tracker.network/</a>
-        </p>
-        <p>
-            <i>If you don't understand/recognize some of the moves, watch this video to learn more:</i> <a href="https://www.youtube.com/watch?v=m4SaYtgGyY0">https://www.youtube.com/watch?v=m4SaYtgGyY0</a>
-        </p>
-    </footer>
+        </section>
+        <footer>
+            <p>
+                <i>Check your own stats here:</i> <a href="https://rocketleague.tracker.network/">https://rocketleague.tracker.network/</a>
+            </p>
+            <p>
+                <i>If you don't understand/recognize some of the moves, watch this video to learn more:</i> <a href="https://www.youtube.com/watch?v=m4SaYtgGyY0">https://www.youtube.com/watch?v=m4SaYtgGyY0</a>
+            </p>
+        </footer>
+    </body>
 
 
 </html>

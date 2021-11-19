@@ -1,0 +1,62 @@
+/*
+- Changed the overall colors of the page to Black and Blue mainly.
+- Changed the text to a white to contrast the black.
+- I thought about changing the menu but when I tried it I felt it changed the look of my website to much and didn't like it. 
+If I wanted to change the Menu I could have used my grid area to do something like this:
+"head main main main"
+"aside main main main" (then change the flex to vertical instead of horizontal)
+"footer footer footer footer"
+This would have put my menu to the side. I would have to finagle it a bit but that would be the jist of it.
+- I really just wanted to add a "light" /"dark" theme, as I see that is the cleanest look.
+*/
+body {
+    background: black;
+    color: ivory;
+}
+h1 {
+    color: ivory;
+    -webkit-text-stroke: 0px;
+}
+footer {
+    background: mediumblue;
+}
+.menu {
+    background: mediumblue;
+}
+.header {
+    background: black;
+}
+.bg-right {
+    background: cyan;
+}
+.bg-left {
+    background: cyan;
+}
+.rankInfo {
+    background: black;
+}
+.motopic {
+    background: black;
+}
+.bg-info {
+    background: cyan;
+}
+#Gold, #Plat, #Diamond, #Champ, #GrandChamp, #SSL {
+    background: cyan;
+}
+a {
+    color: lightcoral;
+}
+#learn {
+    border-left: solid ivory;
+    border-right: solid ivory;
+}
+.menu p:hover {
+    color: black;
+}
+h2 {
+    color: ivory;
+}
+#container {
+    background: black;
+}

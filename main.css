@@ -1,0 +1,472 @@
+/*
+- Changed to grid layout to help with sizing.
+- Fixed footer poistion.
+- Pulled images off of the side of the page.
+- Tried to take away float and add new sections of Grid Area, but 
+it through off all the other pages, so I left it.
+- Added black border to text
+- Fixed media queries so that they actually work. Added a second for more change at smaller screens.
+
+- In the Javascript I had to go in and condense my code to just one function. This took a bit to figure out because
+of the variable not wanting to be recognized but I figured out the (event, 'x') which helped a lot. That
+may not make sense to you as the grader but it was a headache for me lol.
+*/
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    font-family: Impact;
+    color: black;
+}
+html {
+    margin: 0px;
+    margin: 0px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0px;
+    margin: 0px;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 65px 41.4% 50% 65px;
+    grid-template-rows: 45px 1fr auto;
+    grid-template-areas: 
+    "head aside aside aside"
+    "main main main main"
+    "footer footer footer footer";
+}
+footer {
+    background: rgb(131, 188, 245);
+    grid-area: footer;
+    padding: 25px 0px;
+}
+.menu {
+    grid-area: aside;
+    background: black;
+    color: lightskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.header {
+    background: mediumblue;
+    grid-area: head;
+    margin: 0px;
+    padding: 0px;
+}
+.main {
+    grid-area: main;
+}
+.headFlex {
+    color: ghostwhite;
+    width: 50px;
+    font: Impact;
+    font-size: 25px;
+    font: bold;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+.headFlex p {
+    font: Impact bold;
+
+}
+.headFlex div {
+    width: 75px;
+}
+.menu p:hover {
+    color:ghostwhite;
+    cursor: pointer;
+
+}
+.headFlex:hover {
+    color: lightskyblue;
+    cursor: pointer;
+}
+.main p {
+    text-align: center;
+    margin: 25px;
+    font-size: 20px;
+    padding: 10px;
+}
+.RLLogo {
+    max-width: 100%;
+    height: auto;
+    float: left;
+    border-radius: 10px;
+    margin-left: 1%;
+}
+.RLCars {
+    max-width: 100%;
+    height: auto;
+    float: right;
+    border-radius: 10px;
+    margin-right: 1%;
+}
+.RLRanks {
+    height: 320px;
+    float: right;
+    border-radius: 10px;
+    margin-right: 0.8%;
+}
+.RLRanks2 {
+    height: 320px;
+    float: left;
+    border-radius: 10px;
+    margin-left: 0.8%;
+}
+#Gold {
+    display: none;
+    background-color: rgb(224, 223, 223);
+    margin: 0;
+    padding: 0;
+    z-index: -2;
+}
+#Plat {
+    display: none;
+    background-color: rgb(224, 223, 223);
+    margin: 0;
+    padding: 0;
+    z-index: -2;
+}
+#Diamond {
+    display: none;
+    background-color: rgb(224, 223, 223);
+    margin: 0;
+    padding: 0;
+    z-index: -2;
+}
+#Champ {
+    display: none;
+    background-color: rgb(224, 223, 223);
+    margin: 0;
+    padding: 0;
+    z-index: -2;
+}
+#GrandChamp {
+    display: none;
+    background-color: rgb(224, 223, 223);
+    margin: 0;
+    padding: 0;
+    z-index: -2;
+}
+#SSL {
+    display: none;
+    background-color: rgb(224, 223, 223);
+    margin: 0;
+    padding: 0;
+    z-index: -2;
+}
+#Home {
+    display: block;
+}
+.bg-left {
+    background: lightgrey;
+    min-width: 240px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 82%;
+    z-index: -1;
+}
+.bg-right {
+    background: lightgrey;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 82%;
+    right: 0;
+    z-index: -1;
+}
+.rankInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    font-size: 20px;
+    flex-wrap: wrap;
+    background-color: white;
+    z-index: -1;
+}
+.bg-info {
+    background: rgb(224, 223, 223);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    z-index: -1;
+}
+.rankLogo {
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    height: 85px;
+    float: right;
+    border-radius: 10px;
+}
+#learn {
+    border-left: solid black;
+    border-right: solid black;
+}
+.rankInfo h2 {
+    text-align: center;
+    color: blue;
+}
+.rankInfo div {
+    padding: 15px;
+}
+.powerShot {
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.powerShot2 {
+    height: 250px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.backpost {
+    height: 300px;
+    float: right;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.shadow {
+    height: 400px;
+    float: right;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.flipReset {
+    height: 250px;
+    float: right;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.motivation {
+    background: darkblue;
+    font-family: monospace;
+    text-align: center;
+    line-height: 250px;
+    margin: 20px 0px 25px 300px;
+    border-radius: 25px;
+    
+}
+.motivation h2 {
+    margin: 20px;
+    color: ghostwhite;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 200px;
+}
+.motopic {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+}
+.motivation2 {
+    background:slategrey;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 250px;
+    margin: 20px 300px 25px 0px;
+    border-radius: 50px;
+}
+.motivation2 h2 {
+    margin: 20px;
+    color: ghostwhite;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 200px;
+}
+.motivation3 {
+    background: mediumpurple;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    line-height: 350px;
+    margin: 20px 175px 25px 0px;
+    border-radius: 50px;
+}
+.motivation3 h2 {
+    margin: 20px;
+    font-size: 30px;
+    color: ghostwhite;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+h1 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+#Home h1 {
+    -webkit-text-stroke-width: 0px;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .rankInfo{
+        flex-direction: column;
+    }
+    .RLLogo {
+        float: center;
+        margin-left: 35%;
+        margin-right: 65%;
+    }
+    .RLRanks2 {
+        float: bottom;
+        margin-left: 35%;
+        margin-right: 65%;
+    }
+    #Home p {
+        margin-left: 0px;
+    }
+    .bg-left {
+        background: none;
+    }
+    .RLCars {
+        display: none;
+    }
+    .RLRanks {
+        display: none;
+    }
+    .bg-right {
+        background: none;
+    }
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 800px) {
+    .RLCars {
+        display: none;
+    }
+    .RLRanks {
+        display: none;
+    }
+    .bg-right {
+        background: none;
+    }
+    #Home p {
+        margin-left: 200px;
+    }
+}
+
+form {
+    width: 400px;
+}
+
+.errorMsg {
+    color: red;
+}
+
+input.was-validated:invalid {
+    color: red;
+    border: 1px solid red;
+}
+
+input.was-validated:invalid ~ div.errorMsg {
+    display: block;
+}
+
+input:valid ~ div.errorMsg, input:invalid ~ div.errorMsg {
+    display: none;
+}
+
+
+#container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font: normal 22px/1.5 sans-serif;
+    background: lightskyblue;
+    color: #fff;
+    padding: 50px 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+#container h1 {
+    text-align: justify;
+    -webkit-text-stroke: 0px;
+}
+.flex {
+    list-style-type: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.flex li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+}
+
+.flex li li input,
+.flex li textarea {
+    padding: 15px;
+    font: normal 16px/1.5 sans-serif;
+}
+
+.flex button {
+    margin: auto;
+    padding: 22px 46px;
+    font: normal 22px/1.5 sans-serif;
+    border: none;
+    background: #D84315;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    border-radius: 4px;
+    border: 3px solid black;
+}
+h2 {
+    color: black;
+}
+
+.flex > li {
+    margin-bottom: 20px;
+}
+
+.flex > li > label {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 140px;
+            flex: 1 0 140px;
+    max-width: 200px;
+}
+
+.flex > li + * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 200px;
+            flex: 1 0 200px;
+}
+
+.flex > input[type='radio'] ~ div.errorMsg,
+.flex > input[type='checkbox'] ~ div.errorMsg {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 350px;
+            flex: 1 0 350px;
+    text-align: right;
+}
+.successMsg {
+    margin: 50px;
+    font-size: 30px;
+}
